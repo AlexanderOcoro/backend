@@ -15,7 +15,7 @@ app.use('/api/users', userRoutes);
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ Conectado a MongoDB Atlas');
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT, '0.0.0.0', () => {
       console.log(`🚀 Servidor en http://localhost:${process.env.PORT}`);
     });
   })
